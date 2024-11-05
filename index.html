@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alen Babu's Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f9;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #f4d03f;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            text-align: center;
+            background: linear-gradient(to bottom right, #2c3e50, #3498db);
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Typing Effect */
+        .typing-effect {
+            font-size: 1.2em;
+            border-right: 2px solid #f4d03f;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end) infinite, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Social Media Icons */
+        .social-icons a {
+            margin: 0 10px;
+            color: #f4d03f;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+
+        /* 3D Card Effect */
+        .card {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f4d03f;
+            padding-bottom: 5px;
+        }
+
+        /* Skill Bars */
+        .skill-bar {
+            background-color: #ddd;
+            border-radius: 20px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .skill-bar-inner {
+            height: 20px;
+            border-radius: 20px;
+            background-color: #3498db;
+            width: 0;
+            animation: fillSkill 2s ease-in-out forwards;
+        }
+
+        @keyframes fillSkill {
+            from { width: 0; }
+            to { width: var(--skill-level); }
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            font-size: 1em;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #2c3e50;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            nav {
+                padding: 10px 0;
+            }
+            header, section, footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Alen Babu</h1>
+        <p class="typing-effect">Aspiring Software Developer | Tech Enthusiast</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/alen-babu-435b7a256">LinkedIn</a> |
+            <a href="https://github.com/username">GitHub</a> |
+            <a href="mailto:alenbabu003@gmail.com">Email</a>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="card">
+        <h2>Personal Profile</h2>
+        <p>A dynamic Computer Science and Design student with a passion for blending technology and creativity. Skilled in coding, design, and problem-solving, eager to apply my knowledge in innovative projects.</p>
+    </section>
+
+    <!-- Academic Credentials -->
+    <section id="education" class="card">
+        <h2>Academic Credentials</h2>
+        <ul>
+            <li><strong>Bachelor of Technology</strong> - Computer Science and Design, Federal Institute of Science and Technology, Ernakulam - CGPA: 5.13 (May 2025)</li>
+            <li><strong>HSE</strong> - 92%, De Paul English Medium Higher Secondary School, Angamaly (May 2021)</li>
+            <li><strong>SSLC</strong> - 83%, S.C.C.E.M.H.S.S, Snehagiri (2019)</li>
+        </ul>
+    </section>
+
+    <!-- Skills Section with Progress Bars -->
+    <section id="skills" class="card">
+        <h2>Technical Skills</h2>
+        <div>Languages: C, Java, Python</div>
+        <div class="skill-bar"><div class="skill-bar-inner" style="--skill-level: 80%;"></div></div>
+        <div>Frontend: React, HTML, CSS, JavaScript</div>
+        <div class="skill-bar"><div class="skill-bar-inner" style="--skill-level: 75%;"></div></div>
+        <div>Game Designing: Unity</div>
+        <div class="skill-bar"><div class="skill-bar-inner" style="--skill-level: 60%;"></div></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="card">
+        <h2>Academic Projects</h2>
+        <ul>
+            <li><strong>TEZCA</strong> - A car racing simulator game created using Unity.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="card">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Alen Babu. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
